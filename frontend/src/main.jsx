@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { IdeasProvider } from './context/IdeasContext.jsx';
 import './styles/app.css';
+import './registerServiceWorker.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
