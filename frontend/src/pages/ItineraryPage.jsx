@@ -64,7 +64,8 @@ function MultiSelectDestination({ value, onChange, disabled }) {
   );
 }
 
-const BACKEND_URL = 'http://localhost:3000/react-input-data';
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000/react-input-data';
 
 // Build a natural language message from the structured form — backend stays unchanged
 function buildMessage({ from, to, date, duration, travelers, budget }) {
@@ -677,7 +678,7 @@ function ItineraryPage() {
               <h3>Something went wrong</h3>
               <p className="text-white-50 mb-1">{errorMsg}</p>
               <p className="text-white-50 small mb-4">
-                Make sure the backend server is running on <code className="itin-code">localhost:3000</code>.
+                Make sure the backend URL is configured correctly and the server is running.
               </p>
               <button type="button" className="btn itin-submit-btn" onClick={handleReset}>
                 <i className="bi bi-arrow-counterclockwise me-2" />Try Again
