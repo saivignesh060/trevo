@@ -3,7 +3,6 @@ const cors = require('cors');
 require('dotenv').config();
 
 const { ChatGoogleGenerativeAI } = require("@langchain/google-genai");
-const { SerpAPI } = require("@langchain/community/tools/serpapi");
 const { SystemMessage, HumanMessage, ToolMessage } = require("@langchain/core/messages");
 
 const app = express();
